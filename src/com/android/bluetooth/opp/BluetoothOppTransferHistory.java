@@ -85,7 +85,7 @@ public class BluetoothOppTransferHistory extends Activity
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        setContentView(R.layout.bluetooth_transfers_page);
+        setContentView(R.layout.exthm_bt_transfers_page);
         mListView = (ListView) findViewById(R.id.list);
         mListView.setEmptyView(findViewById(R.id.empty));
 
@@ -135,7 +135,7 @@ public class BluetoothOppTransferHistory extends Activity
             mIdColumnId = mTransferCursor.getColumnIndexOrThrow(BluetoothShare._ID);
             // Create a list "controller" for the data
             mTransferAdapter =
-                    new BluetoothOppTransferAdapter(this, R.layout.bluetooth_transfer_item,
+                    new BluetoothOppTransferAdapter(this, R.layout.exthm_bt_transfer_item,
                             mTransferCursor);
             mListView.setAdapter(mTransferAdapter);
             mListView.setScrollBarStyle(View.SCROLLBARS_INSIDE_INSET);
